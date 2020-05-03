@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      body {
+        background: #f7f9f9;
+        opacity: 1;
+        font-family: monospace;
+      }
+
+      .layout {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 10% auto 10%;
+      }
+
+      .header {
+        grid-column: 1;
+        place-self: center;
+      }
+
+      .chart-container {
+        grid-column: 2;
+      }
+
+      .info {
+        grid-column: 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 3px 3px 5px 6px #ccc;
+      }
+
+      .info-container {
+        width: 100%;
+        border: 2px solid #4788c7;
+      }
+
+      h2 {
+        text-align: center;
+        color: #4788c7;
+      }
+    </style>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <div class="header">
+        <img
+          src="https://img.icons8.com/ultraviolet/80/000000/coronavirus.png"
+        />
+      </div>
+      <div class="chart-container"></div>
+      <div class="info">
+        <div class="info-container">
+          <h2>Total Cases:</h2>
+          <div class="total cases"></div>
+        </div>
+        <div class="info-container">
+          <h2>Total Deaths:</h2>
+          <div class="total deaths"></div>
+        </div>
+        <div class="info-container">
+          <h2>Total Recovered:</h2>
+          <div class="total recovered"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
